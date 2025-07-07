@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿# 🚀 Portfolio for Software Developer
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Arjun-Regmi-Chhetri/portfolio-for-software-developer)
@@ -61,3 +62,7 @@ npm run dev
 This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
 
 MIT License allows you to freely use, modify, and distribute this project, both commercially and non-commercially, while providing limited liability protection for the author.
+=======
+# My-Portfolio
+💼 A personal developer portfolio built with React.js and AOS for animations. This project showcases my skills, projects, and contact information in a smooth scrolling, responsive layout. Includes resume download, animated sections, and mobile-friendly navigation.
+>>>>>>> 026d61b078d223ebfd0d440ffd7974dfcfeea3ec
