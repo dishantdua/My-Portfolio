@@ -1,67 +1,73 @@
-﻿# 🚀 Portfolio for Software Developer
+# Dishant Dua – Developer Portfolio 💼
 
-![GitHub last commit](https://img.shields.io/github/last-commit/Arjun-Regmi-Chhetri/portfolio-for-software-developer)
-![GitHub repo size](https://img.shields.io/github/repo-size/Arjun-Regmi-Chhetri/portfolio-for-software-developer)
-![Website Status](https://img.shields.io/website?url=https%3A%2F%2Farjun-regmi-chhetri.github.io%2Fportfolio-for-software-developer%2F)
+![GitHub last commit](https://img.shields.io/github/last-commit/dishantdua/My-Portfolio)
+![GitHub repo size](https://img.shields.io/github/repo-size/dishantdua/My-Portfolio)
+![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fdishantdua.github.io%2FMy-Portfolio)
+
+---
 
 ## 📋 Overview
 
-A modern, responsive portfolio website built with React and Vite, showcasing web development projects, skills, and professional experience. Optimized for SEO with structured data and designed for accessibility across all devices.
+This is a responsive, modern, and interactive **developer portfolio** created using **React.js** and **AOS animations**. The portfolio serves as a central hub to showcase my software development skills, professional projects, and technical experience. It is designed with a strong focus on user experience, minimalism, and smooth scrolling.
 
-🔗 **[View Live Demo](https://arjun-regmi-chhetri.github.io/portfolio-for-software-developer/)**
+Whether you're an employer, recruiter, or fellow developer, this site gives you an instant snapshot of who I am, what I’ve worked on, and how to reach me.
 
+---
+
+## 🔗 Live Demo
+
+👉 **[View Live Portfolio](https://dishantdua.github.io/My-Portfolio/)**
+
+---
 
 ## ✨ Features
 
-- **📱 Responsive Design** - Perfect viewing experience across all devices
-- **♿ Accessibility** - Follows WCAG guidelines for maximum accessibility
-- **🔍 SEO Optimized** - Structured data and meta tags for better search engine visibility
-- **🎬 Animated UI** - Smooth animations and transitions using AOS library
-- **⌨️ Dynamic Text** - Engaging typing animations with Typed.js
-- **📬 Contact Form** - Integrated email functionality with EmailJS
-- **🧭 Client-side Routing** - Seamless navigation with HashRouter
-- **🎨 Material UI** - Modern and clean user interface components
+- ⚡ Smooth scroll navigation across all sections
+- 📄 Resume download functionality
+- 🎨 Stylish design with animated transitions powered by AOS
+- 📱 Fully responsive across mobile, tablet, and desktop
+- 📬 Integrated contact form using EmailJS
+- 🧩 Well-structured components for easy scalability
+- 🌙 Dark-themed aesthetic for modern appeal
+
+---
 
 ## 🛠️ Technologies Used
 
-- **Frontend Framework**: React 18
-- **Build Tool**: Vite
-- **UI Library**: Material UI, Bootstrap 5
-- **Routing**: React Router DOM
-- **Animations**: AOS, Typed.js, iTyped
-- **Email Integration**: EmailJS
-- **Deployment**: GitHub Pages
+- **React.js** – Frontend library for building UI components
+- **React Scroll** – Smooth navigation across sections
+- **AOS (Animate on Scroll)** – Subtle animations as users scroll through
+- **EmailJS** – Email service integration for contact form
+- **HTML5 & CSS3** – Markup and styling
+- **Font Awesome** – Icons throughout the site
+- **VS Code** – Development environment
+
+---
 
 ## 🚀 Getting Started
 
-### Prerequisites
+Follow these steps to run the project locally on your machine:
+
+### 🔧 Prerequisites
 
 - Node.js (v14 or higher)
-- npm or yarn
+- npm or yarn installed globally
 
-### Installation
+---
+
+### 🛠 Installation Guide
 
 ```bash
-# Clone the repository
-git clone https://github.com/Arjun-Regmi-Chhetri/portfolio-for-software-developer.git
+# 1. Clone the repository
+git clone https://github.com/dishantdua/My-Portfolio.git
 
-# Navigate to project directory
-cd portfolio-for-software-developer
+# 2. Navigate into the project directory
+cd My-Portfolio
 
-# Install dependencies
+# 3. Install all dependencies
 npm install
 
-# Start development server
-npm run dev
+# 4. Start the local development server
+npm start
 
-```
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
-
-MIT License allows you to freely use, modify, and distribute this project, both commercially and non-commercially, while providing limited liability protection for the author.
-
-# My-Portfolio
-💼 A personal developer portfolio built with React.js and AOS for animations. This project showcases my skills, projects, and contact information in a smooth scrolling, responsive layout. Includes resume download, animated sections, and mobile-friendly navigation.
-
+# The portfolio will now be running at http://localhost:3000
