@@ -1,4 +1,6 @@
 import "./Project.css";
+const allowedProjects = ["blog-project", "ZOOM_CLONE", "My-Portfolio", "Chat-Application"];
+
 
 export default function ProjectLayout({ projects = [] }) {
   return (
@@ -10,24 +12,27 @@ export default function ProjectLayout({ projects = [] }) {
           </div>
 
           <div className="projects-grid">
-            {projects.map((project) => (
-              <div className="project-box" key={project.id}>
-                <h4 className="project-title">{project.name}</h4>
-                <p className="project-description">{project.description || "No description provided."}</p>
-                <div className="project-bottom">
-                  <ul className="tech-list">
-                    <li>⭐ {project.stargazers_count}</li>
-                    <li>🍴 {project.forks_count}</li>
-                    <li>💻 {project.language || "N/A"}</li>
-                  </ul>
-                  <div className="project-links">
-                    <a href={project.html_url} target="_blank" rel="noopener noreferrer">
-                      View Repository
-                    </a>
-                  </div>
+            {projects
+  .filter((project) => allowedProjects.includes(project.name))
+  .map((project) => (
+            <div className="project-box" key={project.id}>
+              <h4 className="project-title">{project.name}</h4>
+              <p className="project-description">{project.description || "No description provided."}</p>
+              <div className="project-bottom">
+                <ul className="tech-list">
+                  <li>⭐ {project.stargazers_count}</li>
+                  <li>🍴 {project.forks_count}</li>
+                  <li>💻 {project.language || "N/A"}</li>
+                </ul>
+                <div className="project-links">
+                  <a href={project.html_url} target="_blank" rel="noopener noreferrer">
+                    View Repository
+                  </a>
                 </div>
               </div>
-            ))}
+            </div>
+          ))}
+
           </div>
         </div>
       </section>
