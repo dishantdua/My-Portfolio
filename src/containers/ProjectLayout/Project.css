@@ -1,32 +1,89 @@
-.projects {
-  margin: 80px 0px;
-  padding: 83px 180px 0px 180px;
+:root {
+  --backgroundColor: Black;
+  --textColor: #CCD6F6;
+  --textColor1: #7a34d5;
+  --fontFamily: 'Rajdhani', sans-serif;
+  --fontFamily1: 'Seaweed Script', cursive;
 }
 
+.container{
+    max-width: 1600px;
+	height: auto;
+	margin: 0px auto;
+	padding:0 40px;
+}
+/* Shared Title Style */
+.title {
+  counter-reset: item;
+  padding: 15px 0;
+  position: relative;
+}
+.title h3 {
+  counter-increment: item;
+  position: relative;
+}
+.title h3::before {
+  content: "0" counter(item) ".";
+  margin-right: 10px;
+  color: var(--textColor1);
+}
 .projects .wrapper {
   width: 100%;
   height: 100%;
+  padding: 0 80px; /* Ensure alignment */
 }
 
-.projects .title {
-  text-align: center;
-  margin-bottom: 40px;
+.projects .title h3::before {
+  content: "03. ";
 }
 
-.projects .title h3 {
-  font-size: 28px;
-  color: var(--textColor);
-  letter-spacing: 1.5px;
+.projects .row .project-title{
+	color:var(--textColor);
+	font-size:clamp(23px, 6vw, 25px);
+	letter-spacing: 1.3px;
 }
 
-/* === Grid === */
+.title h3::after {
+  content: "";
+  margin-right: 10px;
+  max-width: 400px;
+  width: 100%;
+  height: 0.5px;
+  background-color: #8892b0;
+  position: absolute;
+  top: 12px;
+  margin-left: 12px;
+}
+
+/* =============== SECTIONS =============== */
+.about,
+.banner,
+.work,
+.contact,
+.projects {
+  margin: 180px 180px;
+  padding-top: 90px;
+  
+}
+.portfolio .row {
+display: flex;
+	align-items: center;
+	margin: 50px 50px;
+	position: relative;
+}
+
+/* Optional: override padding if needed */
+.portfolio .row .col-right.full {
+  padding: 20px;
+}
+
+/* Project Grid Section */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   margin: 50px 50px;
 }
-
 .project-box {
   padding: 20px 30px;
   background-color: #112240;
@@ -36,33 +93,21 @@
   cursor: pointer;
   transition: transform 0.2s ease;
 }
-
 .project-box:hover {
   transform: translateY(-5px);
 }
-
-.project-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--textColor);
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-}
-
 .project-description {
-  color: var(--textColor1);
+  color: var(--textColor);
   font-size: 14px;
   line-height: 24px;
   text-align: justify;
   min-height: 60px;
   margin-bottom: 15px;
 }
-
 .project-bottom {
   display: flex;
   flex-direction: column;
 }
-
 .tech-list {
   list-style: none;
   padding-left: 0;
@@ -70,7 +115,6 @@
   font-size: 13px;
   color: #cdd3ec;
 }
-
 .tech-list li {
   display: inline-block;
   margin-right: 10px;
@@ -79,22 +123,47 @@
   border-radius: 5px;
   font-size: 12px;
 }
-
 .project-links a {
   color: #64ffda;
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
 }
-
 .project-links a:hover {
   text-decoration: underline;
 }
 
-/* === Responsive === */
-@media (max-width: 800px) {
-  .projects {
-    padding: 50px 20px 0px 20px;
+/* ======================= MEDIA QUERIES ======================= */
+@media (max-width: 1200px) {
+  .about, .banner, .work, .contact, .projects {
+    margin: 50px 100px;
+  }
+}
+@media (max-width: 1024px) {
+  .about, .banner, .work, .contact, .projects {
+    margin: 50px 70px;
+  }
+}
+@media (max-width: 768px) {
+  .about, .banner, .work, .contact, .projects {
+    margin: 50px 50px;
+  }
+}
+@media (max-width: 600px) {
+  .about, .banner, .work, .contact, .projects {
+    margin: 30px 10px;
+  }
+
+  .project-title {
+    font-size: 16px;
+  }
+
+  .tech-list li {
+    font-size: 11px;
+  }
+
+  .project-links a {
+    font-size: 13px;
   }
 
   .projects-grid {
@@ -110,20 +179,6 @@
 
   .project-description {
     line-height: 20px;
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 600px) {
-  .project-title {
-    font-size: 16px;
-  }
-
-  .tech-list li {
-    font-size: 11px;
-  }
-
-  .project-links a {
     font-size: 13px;
   }
 }
