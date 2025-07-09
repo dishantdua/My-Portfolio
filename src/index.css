@@ -706,8 +706,8 @@ padding: 5px 0;
 }
 .work .col-left .imgbox{
 	position: relative;
-	max-width: 600px;
-	max-height: 350px;
+	max-width: 450px;
+	max-height: 300px;
 	overflow: hidden;
 	cursor: pointer;
 	border-radius: 10px;
@@ -763,7 +763,7 @@ padding: 5px 0;
 	left: 0;
 	text-align: left;
 	width: 100%;
-    max-width: 400px;
+    max-width: 550px;
 }
 .work .rowsecond{
 	position: relative;
@@ -777,17 +777,24 @@ padding: 5px 0;
 	list-style: none;
 	float: left;
 }
-
-.work .row  .box{
-	margin: 20px 0;
-	padding: 20px 30px;
-	background-color: #112240;
-	max-width: 400px;
-	text-align: right;
-	border-radius: 10px;
-	box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
-	cursor: pointer;
+.work .portfolio .box ul {
+  padding-left: 20px;
+  text-align: left;
 }
+
+.work .row .box {
+  margin: 20px 0;
+  padding: 20px 30px;
+  background-color: #112240;
+  width: 100%; /* auto-adjust */
+  max-width: 550px;
+  text-align: left; /* use left for better readability */
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
 
 .work .row .box p{
 	line-height: 25px;
@@ -859,11 +866,11 @@ padding: 5px 0;
 	}
 	
 	.work .rowsecond .col-right{
-		position: absolute;
+		position: relative;
 		left: 0;
 		text-align: left;
 		width: 100%;
-	    max-width: 100%;
+	    max-width: 550px;
 	    backdrop-filter: blur(2px);
 		-webkit-backdrop-filter: blur(2px);
 		}

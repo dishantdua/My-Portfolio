@@ -13,7 +13,7 @@ export default function HomeLayout(){
                                 <div className="title">
                                     <p>Hi, my name is</p>
                                     <h2 className="text">
-                                        <h2>Dishant Dua</h2>
+                                        Dishant Dua
                                     </h2>
                                 </div>
                                 <div className="middleTitle"  data-aos="fade-up">
