@@ -1,22 +1,26 @@
-// src/pages/Projects.jsx
 import { useEffect, useState } from "react";
-import ProjectsLayout from "../containers/ProjectLayout/";
-import { userData } from "../helper/user-data"; // contains { githubUser: "your-username" }
+import ProjectLayout from "../containers/ProjectLayout";
+import { userData } from "../helper/user-data";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
+  const [profile, setProfile] = useState({});
 
   useEffect(() => {
     async function fetchGitHubData() {
-      const res = await fetch(
-        `https://api.github.com/search/repositories?q=user:${userData.githubUser}+fork:false&sort=stars&per_page=6`
+      const userRes = await fetch(`https://api.github.com/users/${userData.githubUser}`);
+      const userDataRes = await userRes.json();
+      setProfile(userDataRes);
+
+      const repoRes = await fetch(
+        `https://api.github.com/search/repositories?q=user:${userData.githubUser}+fork:false&sort=stars&per_page=100`
       );
-      const data = await res.json();
-      setProjects(data.items || []);
+      const repoData = await repoRes.json();
+      setProjects(repoData.items);
     }
 
     fetchGitHubData();
   }, []);
 
-  return <ProjectsLayout projects={projects} />;
+  return <ProjectLayout projects={projects} profile={profile} />;
 }

@@ -30,7 +30,7 @@
 .projects .wrapper {
   width: 100%;
   height: 100%;
-  padding: 0 80px; /* Ensure alignment */
+  padding: 0 40px; /* Ensure alignment */
 }
 
 .projects .title h3::before {
@@ -181,4 +181,25 @@ display: flex;
     line-height: 20px;
     font-size: 13px;
   }
+}
+
+
+.button.resume {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.button.resume a {
+  color: white;
+  background-color: var(--textColor1); /* fallback to your theme */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.button.resume a:hover {
+  background-color: #5e28aa; /* darker shade for hover */
 }

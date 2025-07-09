@@ -362,7 +362,6 @@ border-bottom: 1px solid white;
 .banner .wrapper .middleTitle {
 	color: #7a34d5;
 	font-size: clamp(30px, 8vw, 30px);
-
 }
 .banner .bottom{
 	padding: 15px 0;
@@ -385,7 +384,6 @@ padding: 5px 0;
 .banner .bottom .button{
 	margin: 40px auto;
 	cursor: pointer;
-	
 }
 .banner .button a{
 	border: 1px solid var(--textColor1);
@@ -453,6 +451,13 @@ padding: 5px 0;
 
 
 /*===================  many use of repeated tag ===============*/
+.button.resume {
+  display: flex;
+  justify-content: flex-start; /* Left-align the content */
+  margin-top: 30px;
+}
+
+
 
 
 
