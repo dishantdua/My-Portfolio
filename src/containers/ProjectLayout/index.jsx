@@ -1,6 +1,6 @@
 import "./Project.css";
 
-export default function ProjectsLayout({ projects = [] }) {
+export default function ProjectLayout({ projects = [] }) {
   return (
     <div className="projects">
       <section className="projects-section" id="projects">
