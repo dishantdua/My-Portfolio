@@ -10,8 +10,10 @@
 	--backgroundColor: Black;
 	--textColor: #CCD6F6; /* white color */
 	--textColor1:#7a34d5; /* green color */
-	--fontFamily: 'Rajdhani', sans-serif;
-	--fontFamily1: 'Seaweed Script', cursive;
+	--fontFamily: 'Inter', sans-serif;
+--fontFamily1: 'Playfair Display', serif;
+
+
 }
 body{
     width: 100%;
@@ -699,7 +701,7 @@ padding: 5px 0;
 	padding: 83px 180px 0px 180px;
 }
 .work .wrapper{
-	width: 100%;
+	width: 105%;
 	height: 100%;
 }
 .work .portfolio .row{
