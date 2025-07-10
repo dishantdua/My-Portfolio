@@ -10,9 +10,8 @@
 	--backgroundColor: Black;
 	--textColor: #CCD6F6; /* white color */
 	--textColor1:#7a34d5; /* green color */
-	--fontFamily: 'Poppins', sans-serif;
---fontFamily1: 'Merriweather', serif;
-
+	--fontFamily: 'Lora', serif;
+    --fontFamily1: 'Montserrat', sans-serif;
 }
 body{
     width: 100%;

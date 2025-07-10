@@ -58,7 +58,12 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <Link onClick={hideBar} className="nav-link" activeClass="active" to="contact" spy={true} smooth={true} offset={-250} duration={100}>
+                  <Link onClick={hideBar} className="nav-link" activeClass="active" to="skill" spy={true} smooth={true} offset={-300} duration={100}>
+                    Skills
+                  </Link>
+                </li>
+                <li>
+                  <Link onClick={hideBar} className="nav-link" activeClass="active" to="contact" spy={true} smooth={true} offset={-350} duration={100}>
                     Contact
                   </Link>
                 </li>

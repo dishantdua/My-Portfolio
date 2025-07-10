@@ -1,4 +1,6 @@
 import "./Skills.css";
+import swagger from "../../assets/Swagger.png";
+
 
 const skills = {
   "Languages": [
@@ -23,7 +25,7 @@ const skills = {
     { name: "Spyder", src: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Spyder_logo.svg" },
     { name: "Git", src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" },
     { name: "IIS", src: "https://img.icons8.com/ios-filled/50/windows8.png" },
-    { name: "Swagger", src: "https://static-00.iconduck.com/assets.00/swagger-icon-512x512-8n5yitgo.png" },
+    { name: "Swagger", src: swagger },
   ],
   "Currently Exploring": [
     { name: "Machine Learning", src: "https://upload.wikimedia.org/wikipedia/commons/4/44/Machine_learning_approaches.png" },
@@ -44,8 +46,8 @@ export default function SkillsLayout() {
           </div>
 
           {Object.entries(skills).map(([category, items]) => (
-            <div className="skill-card" key={category}>
-              <h4 className="skill-category">{category}</h4>
+            <div className="skill-card" key={category} >
+              <h4 className="skill-category"style={{ color: 'white' }}>{category}</h4>
               <div className="skill-grid">
                 {items.map((skill) => (
                   <div className="skill-item" key={skill.name}>

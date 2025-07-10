@@ -4,7 +4,7 @@
 }
 
 .skills .title h3::before {
-  content: "05. ";
+  content: "04. ";
   color: var(--textColor1);
 }
 
