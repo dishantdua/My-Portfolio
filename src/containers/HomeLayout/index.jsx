@@ -26,7 +26,7 @@ export default function HomeLayout(){
                                 </p>
                                 </div>
                                 <div className="button resume"  >
-                                <a href={resumePDF} > Check out my resume! </a>
+                                <a href={resumePDF} > Check out my resume </a>
                                 </div>
                             
                             </div>

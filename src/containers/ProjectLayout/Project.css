@@ -184,22 +184,24 @@ display: flex;
 }
 
 
-.button.resume {
+.button.project {
   display: flex;
   justify-content: center;
   margin-top: 30px;
+  border-color: var(--textColor1);
+
 }
 
-.button.resume a {
+.button.project a {
   color: white;
-  background-color: var(--textColor1); /* fallback to your theme */
+  background-color: black; /* fallback to your theme */
   padding: 10px 20px;
   border-radius: 5px;
-  font-weight: bold;
   text-decoration: none;
   transition: background 0.3s ease;
+  border: 2px solid #5e28aa;
 }
 
-.button.resume a:hover {
+.button.project a:hover {
   background-color: #5e28aa; /* darker shade for hover */
 }

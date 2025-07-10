@@ -42,7 +42,7 @@ export default function ProjectLayout({ projects = [], profile = {} }) {
 
           {/* View All Projects Button */}
           {profile?.html_url && (
-            <div className="button resume" style={{ marginTop: "40px", textAlign: "center" }}>
+            <div className="button project">
               <a href={profile.html_url} target="_blank" rel="noopener noreferrer">
                 View All Projects
               </a>
