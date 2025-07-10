@@ -10,9 +10,8 @@
 	--backgroundColor: Black;
 	--textColor: #CCD6F6; /* white color */
 	--textColor1:#7a34d5; /* green color */
-	--fontFamily: 'Inter', sans-serif;
---fontFamily1: 'Playfair Display', serif;
-
+	--fontFamily: 'Poppins', sans-serif;
+--fontFamily1: 'Merriweather', serif;
 
 }
 body{

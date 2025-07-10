@@ -49,7 +49,7 @@ export default function WorkLayout(){
                                         </div>
                                     </div>
                                     <div className="col-right second" data-aos="zoom-in" data-aos-duration="1000">
-                                        <h4 className="project-title">Mountblue Technologies | Jan 2024 – May 2024</h4>
+                                        <h4 className="project-title">Mountblue Technologies | Jan – May 2024</h4>
                                         <div className="box">
                                             <ul>
                                              <li>Trained in <span>Core Java</span>, <span>SQL</span>, <span>JSP/Servlet</span>, and <span>Spring Boot</span>.</li>
