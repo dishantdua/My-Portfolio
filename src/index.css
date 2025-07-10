@@ -28,7 +28,7 @@ body{
 .container{
 	max-width: 1600px;
 	height: auto;
-	margin: 0px auto;
+	margin: 0px ;
 	padding:0 40px;
 }
 
@@ -228,7 +228,7 @@ body{
 		padding: 7px 20px;
 		margin-top: 20px;
 	}
-
+	
 	.header .navbar  .hamburger{
 		display: block;
 		position: relative;
@@ -502,6 +502,9 @@ padding: 5px 0;
 	top: 12px;
 	margin-left: 12px;
 }
+html {
+  scroll-padding-top: 100px;
+}
 
 
 /*===================  many use of repeated tag  end ===============*/
@@ -517,8 +520,8 @@ padding: 5px 0;
 
 
 .about{
-	      margin: 80px 180px;
-	      padding-top: 90px;
+	      margin: 180px 180px;
+	      padding-top: 83px 180px 0px 180px;
 }
 .about .wrapper{
 	 display: flex;
@@ -942,8 +945,8 @@ padding: 5px 0;
 /*========================== contact page ==========================*/
 
 .contact{
-	margin: 130px 180px;
-	padding-top: 90px;
+	margin: 180px 180px;
+	padding-top: 83px 180px 0px 180px;
 }
 
 .contact .form{

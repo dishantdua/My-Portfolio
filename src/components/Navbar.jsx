@@ -1,83 +1,85 @@
 import Logo from '../assets/logo.png';
 import { Link } from 'react-scroll';
- import { useContext } from "react";
- import { ScrollContext } from '../context/ScrollContext';
- import { useState, useRef} from 'react';
- import resumePDF from "../assets/Resume.pdf";
+import { useContext, useRef, useState } from 'react';
+import { ScrollContext } from '../context/ScrollContext';
+import resumePDF from "../assets/Resume.pdf";
 
-//import {Scroll} from '../hooks/scroll';
-export default function Navbar(){
-     const {isSticky} = useContext(ScrollContext);
-     const navRef = useRef();
-     const burger = useRef();
-     const content = useRef();
-     const[nav, setNav] = useState();
+export default function Navbar() {
+  const { isSticky } = useContext(ScrollContext);
+  const navRef = useRef();
+  const burger = useRef();
+  const content = useRef();
+  const [nav, setNav] = useState(false);
 
-     const hamburger =()=>{
-        setNav(()=>{
-            navRef.current.classList.toggle("nav-active");
-            burger.current.classList.toggle("click");
-            content.current.classList.toggle("nav-active");
-        });
+  const hamburger = () => {
+    setNav((prev) => {
+      navRef.current.classList.toggle("nav-active");
+      burger.current.classList.toggle("click");
+      content.current.classList.toggle("nav-active");
+      return !prev;
+    });
+  };
 
-        return nav;
-     };
+  const hideBar = () => {
+    setNav((prev) => {
+      navRef.current.classList.remove("nav-active");
+      burger.current.classList.remove("click");
+      content.current.classList.remove("nav-active");
+      return false;
+    });
+  };
 
-     const hideBar =()=>{
-        setNav(()=>{
-            navRef.current.classList.toggle("nav-active");
-            burger.current.classList.toggle("click");
-            content.current.classList.toggle("nav-active");
-        });
-     };
-
-    return(
-        <>
-            <div className="Navbar" >
-            <section className={isSticky ? 'header sticky' : 'header'} >
-            <div className="navbar" data-aos="zoom-in">
-                    <div className="logo">
-                        <Link to="home" spy={true} smooth={true} offset={-100} duration={100}>
-                            <img src={Logo} alt="Dishant Dua" />
-                        </Link>
-                        
-                    </div>
-                <div className="nav">
-                    <ul className="navigation" ref={navRef} >
-                        <li>
-                            <Link  onClick={hideBar} className="nav-link" activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration={100}>
-                                About
-                            </Link>
-                        </li>
-                        <li>
-                            <Link onClick={hideBar} className="nav-link" activeClass="active" to="work" spy={true} smooth={true} offset={-100} duration={100}>
-                                Work
-                            </Link>
-                        </li>
-                        <li><Link onClick={hideBar} className="nav-link" activeClass="active" to="projects" spy={true} smooth={true} offset={-150} duration={100}>
-                        Projects</Link>
-                        </li>
-                        <li><Link onClick={hideBar} className="nav-link" activeClass="active" to="contact" spy={true} smooth={true} offset={-150} duration={100}>
-                        Contact</Link>
-                        </li>
-                        <li className="resume">
-                       <a href={resumePDF} download="DishantDua_Resume.pdf" onClick={hideBar} className="resume-link">
-                        Resume
-                        </a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="hamburger" onClick={hamburger} ref={burger}>
-                    <div className="inner-hams">
-                        <ul className="line"></ul>
-                    </div>
-                </div>
+  return (
+    <>
+      <div className="Navbar">
+        <section className={isSticky ? 'header sticky' : 'header'}>
+          <div className="navbar" data-aos="zoom-in">
+            <div className="logo">
+              <Link to="home" spy={true} smooth={true} offset={-100} duration={100}>
+                <img src={Logo} alt="Dishant Dua" />
+              </Link>
             </div>
-            
+
+            <div className="nav">
+              <ul className="navigation" ref={navRef}>
+                <li>
+                  <Link onClick={hideBar} className="nav-link" activeClass="active" to="about" spy={true} smooth={true} offset={-100} duration={100}>
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link onClick={hideBar} className="nav-link" activeClass="active" to="work" spy={true} smooth={true} offset={-200} duration={100}>
+                    Work
+                  </Link>
+                </li>
+                <li>
+                  <Link onClick={hideBar} className="nav-link" activeClass="active" to="projects" spy={true} smooth={true} offset={-250} duration={100}>
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link onClick={hideBar} className="nav-link" activeClass="active" to="contact" spy={true} smooth={true} offset={-250} duration={100}>
+                    Contact
+                  </Link>
+                </li>
+                <li className="resume">
+                  <a href={resumePDF} download="DishantDua_Resume.pdf" onClick={hideBar} className="resume-link">
+                    Resume
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="hamburger" onClick={hamburger} ref={burger}>
+              <div className="inner-hams">
+                <ul className="line"></ul>
+              </div>
+            </div>
+          </div>
         </section>
-        <div className="content" ref={content} onClick={hideBar}>
-        </div>
-            </div>
-        </>
-    );
+
+        <div className="content" ref={content} onClick={hideBar}></div>
+      </div>
+    </>
+  );
 }

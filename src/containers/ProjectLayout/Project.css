@@ -9,7 +9,7 @@
 .container{
     max-width: 1600px;
 	height: auto;
-	margin: 0px auto;
+	margin: 0px ;
 	padding:0 40px;
 }
 /* Shared Title Style */
@@ -62,7 +62,7 @@
 .contact,
 .projects {
   margin: 180px 180px;
-  padding-top: 90px;
+  padding-top: 83px 180px 0px 180px;
   
 }
 .portfolio .row {
